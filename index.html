@@ -24,6 +24,8 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-4.0.0.js"
         integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous" defer></script>
+    <!-- Alpine.JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Local JS -->
     <script src="script.js" defer></script>
 </head>
@@ -60,7 +62,8 @@
                 </h1>
                 <div class="subheading mb-5">
                     (614) 531-0534 ·
-                    <span id="email" class="hidden text-primary">[Click to show email]</span>
+                    <span id="email" class="text-primary" x-data="{hidden: true}" @click="hidden = !hidden"
+                        x-text="hidden ? '[Click to show email]' : 'funkdd@mail.uc.edu'"></span>
                 </div>
                 <p class="lead mb-5">I am a student at the University of Cincinnati pursuing my Bachelor's Degree in
                     Computer Science graduation may 2028. I am interested in Embedded Software Development, Backend Web
