@@ -40,3 +40,13 @@ function getJoke() {
 }
 getJoke();
 setInterval(getJoke, 60000);
+
+// dog
+function getDog() {
+    $.get(`https://dog.ceo/api/breeds/image/random`, (res) => {
+        $("#dog").append(
+            $("<img>").attr("src", res.message)
+        );
+    });
+}
+getDog();
