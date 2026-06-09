@@ -1,26 +1,32 @@
 @import "template/template.css";
 
 :root {
-    --body-bg-dark: #0c0c0c;
-    --text-dark: #fbfbfb;
-    --text-dark-secondary: var(--bs-primary);
+  --body-bg-dark: #0c0c0c;
+  --text-dark: #fbfbfb;
+  --text-dark-secondary: var(--bs-primary);
+}
+
+footer {
+  background-color: var(--bs-primary);
+  color: var(--bs-light);
 }
 
 .light {
-    background-color: rgba(var(--bs-body-bg-rgb));
+  background-color: rgba(var(--bs-body-bg-rgb));
 }
 
 .dark {
-    background-color: var(--body-bg-dark);
-    color: var(--text-dark);
+  background-color: var(--body-bg-dark);
+  color: var(--text-dark);
 }
 
 body.dark h1 {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 
-body.dark h2, body.dark h3 {
-    color: var(--text-dark-secondary);
+body.dark h2,
+body.dark h3 {
+  color: var(--text-dark-secondary);
 }
 
 /* Switch HTML/CSS from: https://www.w3schools.com/howto/howto_css_switch.asp */
@@ -64,15 +70,15 @@ body.dark h2, body.dark h3 {
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);

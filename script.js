@@ -20,5 +20,23 @@ setInterval(function digitalClock() {
 
 // Dark Mode
 function toggleDark() {
-    $("body").attr("class") == "light" ? $("body").removeClass("light").addClass("dark") : $("body").removeClass("dark").addClass("light"); 
+    $("body").attr("class") == "light" ? $("body").removeClass("light").addClass("dark") : $("body").removeClass("dark").addClass("light");
 }
+
+// Joke
+function getJoke() {
+    $.get("https://v2.jokeapi.dev/joke/Any", (res) => {
+        if (res.type == "single") {
+            let encoded = document.createElement("div");
+            encoded.innerText = res.joke;
+            $("#joke").html(encoded);
+        }
+        else {
+            let encoded = document.createElement("div");
+            encoded.innerText = `${res.setup}\n${res.delivery}`;
+            $("#joke").html(encoded);
+        }
+    })
+}
+getJoke();
+setInterval(getJoke, 60000);
