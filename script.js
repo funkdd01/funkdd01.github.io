@@ -17,3 +17,8 @@ setInterval(function digitalClock() {
     $("#digital-clock").html(`${String(now.getHours() % 12 || 12).padStart(2, 0)}:${String(now.getMinutes()).padStart(2, 0)}:${String(now.getSeconds()).padStart(2, 0)}`);
     return digitalClock;
 }(), 1000)
+
+// Dark Mode
+function toggleDark() {
+    $("body").attr("class") == "light" ? $("body").removeClass("light").addClass("dark") : $("body").removeClass("dark").addClass("light"); 
+}

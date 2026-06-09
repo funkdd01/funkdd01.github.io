@@ -34,7 +34,7 @@
     <script src="script.js" defer></script>
 </head>
 
-<body id="page-top">
+<body id="page-top" class="light">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <div id="clock">
@@ -57,6 +57,14 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
             </ul>
+        </div>
+        <!-- Switch HTML/CSS from: https://www.w3schools.com/howto/howto_css_switch.asp -->
+        <div id="switch">
+            <span style="color: var(--bs-light)">Dark Mode:</span>
+            <label class="switch">
+                <input type="checkbox" onclick="toggleDark()" autocomplete="off">
+                <span class="slider round"></span>
+            </label>
         </div>
     </nav>
     <!-- Page Content-->
