@@ -46,8 +46,13 @@ body.dark h1 {
 }
 
 body.dark h2,
-body.dark h3 {
+body.dark h3,
+body.dark h4 {
   color: var(--text-dark-secondary);
+}
+
+footer h4#intro {
+  color: var(--bs-dark);
 }
 
 /* Switch HTML/CSS from: https://www.w3schools.com/howto/howto_css_switch.asp */
