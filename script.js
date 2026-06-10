@@ -50,3 +50,15 @@ function getDog() {
     });
 }
 getDog();
+
+// Cookies
+document.addEventListener("DOMContentLoaded", () => {
+    let cookieName = "visitedDate";
+    if (document.cookie === "") {
+        alert("Welcome to my homepage for the first time!");
+    }
+    else {
+        alert(`Welcome back! Your last visit was ${document.cookie.substring(cookieName.length + 1)}`)
+    }
+    document.cookie = `${cookieName}=${new Date()}`
+})
